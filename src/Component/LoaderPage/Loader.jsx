@@ -1,12 +1,11 @@
 import React from "react";
-import Img1 from "./../../asset/gif/gearIcon.gif";
-import "./Loader.css";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import "./Loader.css"
 function Loader() {
     return (
-        <div class="container d-flex justify-content-center align-items-center">
-            <div className="img-top">
-                <img src={Img1} alt="" className="img-fluid" />
-            </div>
+        <div class="container">
+            <Skeleton count={6} className="size" />
         </div >
     )
 }
