@@ -3,10 +3,10 @@ import MainRouter from "./Component/Router/MainRouter";
 
 
 import "./App.css"
-function App() {
+function App(props) {
   return (
         <Fragment>
-          <MainRouter/>
+          <MainRouter {...props}/>
         </Fragment>
   );
 }

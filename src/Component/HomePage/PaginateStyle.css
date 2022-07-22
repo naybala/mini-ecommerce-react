@@ -66,6 +66,7 @@ p{
     .small-container {
         flex: 100%;
         height: 200px;
+        margin-bottom: 3rem;
     }
   }
   

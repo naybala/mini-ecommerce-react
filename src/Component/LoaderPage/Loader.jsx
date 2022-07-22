@@ -4,7 +4,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import "./Loader.css"
 function Loader() {
     return (
-        <div class="container">
+        <div className="container">
             <Skeleton count={6} className="size" />
         </div >
     )

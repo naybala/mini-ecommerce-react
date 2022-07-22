@@ -7,7 +7,7 @@ export default function About() {
         <>
             <h1>This is About Page</h1>
             <br />
-            <div class="container">
+            <div className="container">
                 <Skeleton count={5} />
             </div >
         </>

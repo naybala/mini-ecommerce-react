@@ -5,7 +5,7 @@ import ReactPaginate from "react-paginate";
 import Loader from "../LoaderPage/Loader";
 import "./PaginateStyle.css";
 
-function List() {
+function Home(props) {
     const [data, setData] = useState([]);
     const [loader, setLoader] = useState(true);
     const [pageNumber, setPageNumber] = useState(0);
@@ -26,6 +26,10 @@ function List() {
         setPageNumber(selected);
     };
 
+    const addToCart = (product) => {
+        props.setCart([...props.cart, product]);
+    }
+
     return (
         <>
             {
@@ -36,7 +40,7 @@ function List() {
                             <div className='flex-container'>
                                 {
                                     data.slice(pageShow, pageShow + perPage).map(d => (
-                                        <div className='small-container'>
+                                        <div key={d.id} className='small-container'>
                                             <div className='inner-container d-flex align-items-center'>
                                                 <img src={d.image} alt="" className='img-img-thumbnail w-50 rounded-2 image' />
                                             </div>
@@ -44,7 +48,7 @@ function List() {
                                                 <h5 className="card-title">{d.title}</h5>
                                                 <p className="text-danger">price - {d.price} $</p>
                                                 <p className="text-primary">category - {d.category}</p>
-                                                <button className='btn btn-primary'>Add To Cart</button>
+                                                <button onClick={() => addToCart(d)} className='btn btn-primary'>Add To Cart</button>
                                             </div>
                                         </div>
                                     ))
@@ -73,4 +77,4 @@ function List() {
 
     )
 }
-export default List;
+export default Home;
