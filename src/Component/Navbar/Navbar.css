@@ -1,0 +1,22 @@
+.nav-link {
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    transition: all 0.3s;
+    border-radius: 1rem; 
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 10px black;
+}
+.active{
+    background-color: #61DAFB;
+    border-radius: 1rem;
+    transition: all 0s;
+}
+
+@media (min-width:290px) and (max-width:990px){
+    .nav-link {
+        text-align: center;
+    }
+ 
+}

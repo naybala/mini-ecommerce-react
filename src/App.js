@@ -1,12 +1,13 @@
 import React, {Fragment} from "react";
-import List from "./Component/List";
+import MainRouter from "./Component/Router/MainRouter";
+
 
 import "./App.css"
 function App() {
   return (
-    <Fragment>
-      <List/>
-    </Fragment>
+        <Fragment>
+          <MainRouter/>
+        </Fragment>
   );
 }
 export default App;
