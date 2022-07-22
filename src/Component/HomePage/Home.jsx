@@ -27,7 +27,16 @@ function Home(props) {
     };
 
     const addToCart = (product) => {
-        props.setCart([...props.cart, product]);
+        let checkSame = props.cart.find((d) => {
+            return d.title === product.title;
+        });
+
+        if (checkSame) {
+            checkSame.qty += 1;
+        } else {
+            product.qty = 1;
+            props.setCart([...props.cart, product]);
+        }
     }
 
     return (
